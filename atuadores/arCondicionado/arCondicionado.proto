@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+service ArCondicionado {
+  rpc LigarArCondicionado (Empty) returns (Response) {}
+  rpc DesligarArCondicionado (Empty) returns (Response) {}
+  rpc ConfigurarTemperatura (Temperatura) returns (Response) {}
+}
+
+message Empty {}
+
+message Temperatura {
+  int32 value = 1;
+}
+
+message Response {
+  string message = 1;
+}

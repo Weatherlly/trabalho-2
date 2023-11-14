@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+service Sprinkler {
+  rpc LigarSprinkler (Empty) returns (Response) {}
+  rpc DesligarSprinkler (Empty) returns (Response) {}
+}
+
+message Empty {}
+
+message Response {
+  string message = 1;
+}
